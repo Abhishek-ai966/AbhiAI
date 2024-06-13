@@ -1,0 +1,55 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="calculator">
+        <form action="/" method="post">
+            <input type="text" id="display" name="display" value="{{ display }}" readonly>
+            <div class="buttons">
+                <div class="row">
+                    <button type="submit" name="button" value="7">7</button>
+                    <button type="submit" name="button" value="8">8</button>
+                    <button type="submit" name="button" value="9">9</button>
+                    <button type="submit" name="button" value="/">/</button>
+                </div>
+                <div class="row">
+                    <button type="submit" name="button" value="4">4</button>
+                    <button type="submit" name="button" value="5">5</button>
+                    <button type="submit" name="button" value="6">6</button>
+                    <button type="submit" name="button" value="*">*</button>
+                </div>
+                <div class="row">
+                    <button type="submit" name="button" value="1">1</button>
+                    <button type="submit" name="button" value="2">2</button>
+                    <button type="submit" name="button" value="3">3</button>
+                    <button type="submit" name="button" value="-">-</button>
+                </div>
+                <div class="row">
+                    <button type="submit" name="button" value="0">0</button>
+                    <button type="submit" name="button" value=".">.</button>
+                    <button type="submit" name="button" value="=">=</button>
+                    <button type="submit" name="button" value="+">+</button>
+                </div>
+                <div class="row">
+                    <button type="submit" name="button" value="clear">Clear</button>
+                    <button type="submit" name="button" value="hex">Hex</button>
+                    <button type="submit" name="button" value="bin">Bin</button>
+                    <button type="submit" name="button" value="oct">Oct</button>
+                </div>
+            </div>
+        </form>
+        <div class="result">
+            {% if result %}
+                <p>{{ result }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

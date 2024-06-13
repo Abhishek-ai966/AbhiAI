@@ -1,0 +1,77 @@
+/* static/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.calculator {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border-left: 5px solid #030c03; /* Left border color and width */
+    border-right: 5px solid #030c03;/* Right border color and width */
+    border-top: 5px solid #030c03;
+    border-bottom: 5px solid #030c03;
+}
+
+#display {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border: none; /* Remove border from display area */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #0baff0;
+    color: rgb(5, 17, 13);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #2c09f5;
+}
+
+.buttons input[type="submit"] {
+    flex: 1;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #008CBA;
+    color: rgb(238, 6, 6);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px; /* Add padding to keep text within borders */
+    border: 2px solid #020702; /* Border around result */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.result p {
+    font-size: 1.5em;
+    color: #011d0d;
+}
